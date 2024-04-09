@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- *  Copyright (c) 2021, Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
+ *  Copyright (c) 2020, Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -24,10 +24,10 @@
 package org.jeasy.rules.api;
 
 /**
- * Abstraction for a rule that can be fired by a rules engine.
- *
- * Rules are registered in a namespace of rule of type {@link Rules}
- * in which they must have a <strong>unique</strong> name.
+ * 可以由规则引擎触发的规则的抽象。
+ * <p>
+ * 规则注册在{@link Rules}类型规则的命名空间中
+ * 其中必须有一个<strong>唯一的</strong>名称。
  *
  * @author Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
  */
@@ -49,7 +49,8 @@ public interface Rule extends Comparable<Rule> {
     int DEFAULT_PRIORITY = Integer.MAX_VALUE - 1;
 
     /**
-     * Getter for rule name.
+     * 规则名
+     *
      * @return the rule name
      */
     default String getName() {
@@ -57,7 +58,8 @@ public interface Rule extends Comparable<Rule> {
     }
 
     /**
-     * Getter for rule description.
+     * 规则描述
+     *
      * @return rule description
      */
     default String getDescription() {
@@ -65,7 +67,8 @@ public interface Rule extends Comparable<Rule> {
     }
 
     /**
-     * Getter for rule priority.
+     * 规则优先级
+     *
      * @return rule priority
      */
     default int getPriority() {
@@ -73,15 +76,16 @@ public interface Rule extends Comparable<Rule> {
     }
 
     /**
-     * This method implements the rule's condition(s).
-     * <strong>Implementations should handle any runtime exception and return true/false accordingly</strong>
+     * 这个方法实现了规则的条件。
+     * <strong>实现应该处理任何运行时异常并相应地返回true/false </strong>
      *
      * @return true if the rule should be applied given the provided facts, false otherwise
      */
     boolean evaluate(Facts facts);
 
     /**
-     * This method implements the rule's action(s).
+     * 这个方法实现了规则的操作。
+     *
      * @throws Exception thrown if an exception occurs when performing action(s)
      */
     void execute(Facts facts) throws Exception;

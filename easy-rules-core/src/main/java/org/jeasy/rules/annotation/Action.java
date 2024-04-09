@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- *  Copyright (c) 2021, Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
+ *  Copyright (c) 2020, Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -30,9 +30,9 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Annotation to mark a method as a rule action.
- * Must annotate any public method with no arguments.
- * The method return value will be ignored by the engine.
+ * 注释将方法标记为规则操作。
+ * 必须注释任何没有参数的公共方法。
+ * *方法返回值将被引擎忽略。
  *
  * @author Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
  */

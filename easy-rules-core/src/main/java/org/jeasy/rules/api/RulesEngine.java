@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- *  Copyright (c) 2021, Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
+ *  Copyright (c) 2020, Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -28,21 +28,21 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Rules engine interface.
+ * 规则引擎接口
  *
  * @author Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
  */
 public interface RulesEngine {
 
     /**
-     * Return the rules engine parameters.
+     * 返回规则引擎参数。
      *
      * @return The rules engine parameters
      */
     RulesEngineParameters getParameters();
 
     /**
-     * Return the list of registered rule listeners.
+     * 返回已注册规则侦听器的列表
      *
      * @return the list of registered rule listeners
      */
@@ -51,7 +51,7 @@ public interface RulesEngine {
     }
 
     /**
-     * Return the list of registered rules engine listeners.
+     * 返回已注册规则引擎侦听器的列表。
      *
      * @return the list of registered rules engine listeners
      */
@@ -60,12 +60,12 @@ public interface RulesEngine {
     }
 
     /**
-     * Fire all registered rules on given facts.
+     * 启动
      */
     void fire(Rules rules, Facts facts);
 
     /**
-     * Check rules without firing them.
+     * 检查规则
      * @return a map with the result of evaluation of each rule
      */
     default Map<Rule, Boolean> check(Rules rules, Facts facts) {

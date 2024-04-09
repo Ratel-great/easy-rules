@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- *  Copyright (c) 2021, Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
+ *  Copyright (c) 2020, Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -24,7 +24,7 @@
 package org.jeasy.rules.api;
 
 /**
- * This interface represents a rule's action.
+ * 该接口表示规则的操作。
  *
  * @author Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
  */
@@ -32,7 +32,7 @@ package org.jeasy.rules.api;
 public interface Action {
 
     /**
-     * Execute the action when the rule's condition evaluates to true.
+     * 当规则的条件求值为true时执行操作。
      *
      * @param facts known at the time of execution of the action
      * @throws Exception when unable to execute the action

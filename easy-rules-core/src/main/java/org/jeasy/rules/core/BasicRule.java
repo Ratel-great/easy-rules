@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- *  Copyright (c) 2021, Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
+ *  Copyright (c) 2020, Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -29,39 +29,39 @@ import org.jeasy.rules.api.Facts;
 import org.jeasy.rules.api.Rule;
 
 /**
- * Basic rule implementation class that provides common methods.
+ * 提供公共方法的基本规则实现类。
  *
- * You can extend this class and override {@link BasicRule#evaluate(Facts)} and {@link BasicRule#execute(Facts)} to provide rule
- * conditions and actions logic.
+ * 你可以扩展这个类并覆盖{@link BasicRule#evaluate(Facts)}和{@link BasicRule#execute(Facts)}来提供规则
+ * 条件和动作逻辑。
  *
  * @author Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
  */
 public class BasicRule implements Rule {
 
     /**
-     * Rule name.
+     * 规则名称。
      */
     protected String name;
 
     /**
-     * Rule description.
+     * 规则描述。
      */
     protected String description;
 
     /**
-     * Rule priority.
+     * 规则优先级。
      */
     protected int priority;
 
     /**
-     * Create a new {@link BasicRule}.
+     * 创建一个新的{@link BasicRule}。
      */
     public BasicRule() {
         this(Rule.DEFAULT_NAME, Rule.DEFAULT_DESCRIPTION, Rule.DEFAULT_PRIORITY);
     }
 
     /**
-     * Create a new {@link BasicRule}.
+     * 创建一个新的{@link BasicRule}。
      *
      * @param name rule name
      */
@@ -70,7 +70,7 @@ public class BasicRule implements Rule {
     }
 
     /**
-     * Create a new {@link BasicRule}.
+     * 创建一个新的{@link BasicRule}。
      *
      * @param name rule name
      * @param description rule description
@@ -80,7 +80,7 @@ public class BasicRule implements Rule {
     }
 
     /**
-     * Create a new {@link BasicRule}.
+     * 创建一个新的{@link BasicRule}。
      *
      * @param name rule name
      * @param description rule description

@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- *  Copyright (c) 2021, Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
+ *  Copyright (c) 2020, Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -24,14 +24,14 @@
 package org.jeasy.rules.api;
 
 /**
- * A listener for rule execution events.
+ * 规则执行事件的侦听器。
  *
  * @author Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
  */
 public interface RuleListener {
 
     /**
-     * Triggered before the evaluation of a rule.
+     * 在规则求值之前触发。
      *
      * @param rule being evaluated
      * @param facts known before evaluating the rule
@@ -42,7 +42,7 @@ public interface RuleListener {
     }
 
     /**
-     * Triggered after the evaluation of a rule.
+     * 在规则求值之后触发。
      *
      * @param rule that has been evaluated
      * @param facts known after evaluating the rule
@@ -51,7 +51,7 @@ public interface RuleListener {
     default void afterEvaluate(Rule rule, Facts facts, boolean evaluationResult) { }
 
     /**
-     * Triggered on condition evaluation error due to any runtime exception.
+     * 由于任何运行时异常而导致的条件计算错误触发
      *
      * @param rule that has been evaluated
      * @param facts known while evaluating the rule
@@ -60,7 +60,7 @@ public interface RuleListener {
     default void onEvaluationError(Rule rule, Facts facts, Exception exception) { }
 
     /**
-     * Triggered before the execution of a rule.
+     * 在执行规则之前触发。
      *
      * @param rule the current rule
      * @param facts known facts before executing the rule
@@ -68,7 +68,7 @@ public interface RuleListener {
     default void beforeExecute(Rule rule, Facts facts) { }
 
     /**
-     * Triggered after a rule has been executed successfully.
+     * 规则执行成功后触发。
      *
      * @param rule the current rule
      * @param facts known facts after executing the rule
@@ -76,7 +76,7 @@ public interface RuleListener {
     default void onSuccess(Rule rule, Facts facts) { }
 
     /**
-     * Triggered after a rule has failed.
+     * 在规则失败后触发。
      *
      * @param rule the current rule
      * @param facts known facts after executing the rule

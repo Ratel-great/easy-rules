@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- *  Copyright (c) 2021, Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
+ *  Copyright (c) 2020, Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -26,17 +26,17 @@ package org.jeasy.rules.api;
 import org.jeasy.rules.core.InferenceRulesEngine;
 
 /**
- * A listener for rules engine execution events.
+ * 规则引擎执行事件的侦听器。
  *
  * @author Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
  */
 public interface RulesEngineListener {
 
     /**
-     * Triggered before evaluating the rule set.
-     * <strong>When this listener is used with a {@link InferenceRulesEngine},
-     * this method will be triggered before the evaluation of each candidate rule
-     * set in each iteration.</strong>
+     * 在计算规则集之前触发。
+     *  <strong>当这个监听器与{@link InferenceRulesEngine}一起使用时，
+     * 此方法将在每个候选规则评估前触发
+     * </strong>
      *
      * @param rules to fire
      * @param facts present before firing rules
@@ -44,10 +44,10 @@ public interface RulesEngineListener {
     default void beforeEvaluate(Rules rules, Facts facts) { }
 
     /**
-     * Triggered after executing the rule set
-     * <strong>When this listener is used with a {@link InferenceRulesEngine},
-     * this method will be triggered after the execution of each candidate rule
-     * set in each iteration.</strong>
+     * 在执行规则集后触发
+     * * <strong>当这个监听器与{@link InferenceRulesEngine}一起使用时，
+     * *此方法将在每个候选规则执行后触发
+     * </strong>
      *
      * @param rules fired
      * @param facts present after firing rules

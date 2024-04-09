@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- *  Copyright (c) 2021, Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
+ *  Copyright (c) 2020, Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -31,6 +31,7 @@ import org.jeasy.rules.core.DefaultRulesEngine;
 import org.jeasy.rules.mvel.MVELRule;
 import org.jeasy.rules.mvel.MVELRuleFactory;
 import org.jeasy.rules.support.reader.YamlRuleDefinitionReader;
+import org.mvel2.ParserContext;
 
 import java.io.FileReader;
 
@@ -38,12 +39,12 @@ public class Launcher {
 
     public static void main(String[] args) throws Exception {
         //create a person instance (fact)
-        Person tom = new Person("Tom", 14);
+        Person tom = new Person("Tom", 19);
         Facts facts = new Facts();
         facts.put("person", tom);
 
         // create rules
-        MVELRule ageRule = new MVELRule()
+        MVELRule ageRule = new MVELRule(new ParserContext())
                 .name("age rule")
                 .description("Check if person's age is > 18 and mark the person as adult")
                 .priority(1)

@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- *  Copyright (c) 2021, Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
+ *  Copyright (c) 2020, Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -24,7 +24,7 @@
 package org.jeasy.rules.api;
 
 /**
- * This interface represents a rule's condition.
+ * 该接口表示规则的条件。
  *
  * @author Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
  */
@@ -32,7 +32,7 @@ package org.jeasy.rules.api;
 public interface Condition {
 
     /**
-     * Evaluate the condition according to the known facts.
+     * 根据已知的事实评估情况。
      *
      * @param facts known when evaluating the rule.
      *
@@ -41,12 +41,12 @@ public interface Condition {
     boolean evaluate(Facts facts);
 
     /**
-     * A NoOp {@link Condition} that always returns false.
+     * A NoOp {@link Condition}总是返回false。
      */
     Condition FALSE = facts -> false;
 
     /**
-     * A NoOp {@link Condition} that always returns true.
+     * A NoOp {@link Condition}总是返回 true.
      */
     Condition TRUE = facts -> true;
 }

@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- *  Copyright (c) 2021, Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
+ *  Copyright (c) 2020, Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -30,8 +30,8 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Annotation to mark the method to execute to get rule priority.
- * Must annotate any public method with no arguments and that returns an integer value.
+ * 注释来标记要执行的方法以获得规则优先级。
+ * 必须注释任何没有参数且返回整数值的公共方法。
  *
  * @author Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
  */

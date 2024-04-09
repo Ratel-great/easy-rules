@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- *  Copyright (c) 2021, Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
+ *  Copyright (c) 2020, Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -26,8 +26,8 @@ package org.jeasy.rules.api;
 import java.util.Objects;
 
 /**
- * A class representing a named fact. Facts have unique names within a {@link Facts}
- * instance.
+ * 表示命名事实的类。在{@link Facts}中，事实有唯一的名称
+ * *实例。
  * 
  * @param <T> type of the fact
  * @author Mahmoud Ben Hassine
@@ -38,7 +38,7 @@ public class Fact<T> {
 	private final T value;
 
 	/**
-	 * Create a new fact.
+	 * 创造一个新的事实。
 	 * @param name of the fact
 	 * @param value of the fact
 	 */
@@ -50,7 +50,7 @@ public class Fact<T> {
 	}
 
 	/**
-	 * Get the fact name.
+	 * 获取事实名称。
 	 * @return fact name
 	 */
 	public String getName() {
@@ -58,7 +58,7 @@ public class Fact<T> {
 	}
 
 	/**
-	 * Get the fact value.
+	 * 获取事实值。
 	 * @return fact value
 	 */
 	public T getValue() {

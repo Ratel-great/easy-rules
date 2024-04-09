@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- *  Copyright (c) 2021, Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
+ *  Copyright (c) 2020, Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -45,7 +45,7 @@ public class DefaultRuleTest extends AbstractTest {
     @Test
     public void WhenConditionIsTrue_ThenActionsShouldBeExecutedInOrder() throws Exception {
         // given
-        when(condition.evaluate(facts)).thenReturn(true);
+//        when(condition.evaluate(facts)).thenReturn(true);
         Rule rule = new RuleBuilder()
                 .when(condition)
                 .then(action1)

@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- *  Copyright (c) 2021, Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
+ *  Copyright (c) 2020, Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -27,11 +27,11 @@ import org.jeasy.rules.core.DefaultRulesEngine;
 import org.jeasy.rules.core.InferenceRulesEngine;
 
 /**
- * Parameters of a rules engine.
+ * 规则引擎的参数。
  *
  * <ul>
- *     <li>When parameters are used with a {@link DefaultRulesEngine}, they are applied on <strong>all registered rules</strong>.</li>
- *     <li>When parameters are used with a {@link InferenceRulesEngine}, they are applied on <strong>candidate rules in each iteration</strong>.</li>
+ *     <li>当参数与{@link DefaultRulesEngine}一起使用时，它们将应用于 <strong>所有注册规则</strong>.</li>
+ *     <li>当参数与{@link InferenceRulesEngine},它们将应用于 <strong>每次迭代中的候选规则</strong>.</li>
  * </ul>
  *
  * @author Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
@@ -39,32 +39,32 @@ import org.jeasy.rules.core.InferenceRulesEngine;
 public class RulesEngineParameters {
 
     /**
-     * Default rule priority threshold.
+     * 默认规则优先级阈值。
      */
     public static final int DEFAULT_RULE_PRIORITY_THRESHOLD = Integer.MAX_VALUE;
     
     /**
-     * Parameter to skip next applicable rules when a rule is applied.
+     * 参数，以便在应用规则时跳过下一个适用规则。
      */
     private boolean skipOnFirstAppliedRule;
 
     /**
-     * Parameter to skip next applicable rules when a rule is non triggered
+     * 参数，用于在未触发规则时跳过下一个适用规则
      */
     private boolean skipOnFirstNonTriggeredRule;
 
     /**
-     * Parameter to skip next applicable rules when a rule has failed.
+     * 参数，以便在规则失败时跳过下一个适用规则。
      */
     private boolean skipOnFirstFailedRule;
 
     /**
-     * Parameter to skip next rules if priority exceeds a user defined threshold.
+     * 参数，如果优先级超过用户定义的阈值，则跳过下一个规则。
      */
     private int priorityThreshold;
 
     /**
-     * Create a new {@link RulesEngineParameters} with default values.
+     * 用默认值创建一个新的{@link RulesEngineParameters}。
      */
     public RulesEngineParameters() {
         this.priorityThreshold = RulesEngineParameters.DEFAULT_RULE_PRIORITY_THRESHOLD;

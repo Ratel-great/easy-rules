@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- *  Copyright (c) 2021, Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
+ *  Copyright (c) 2020, Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -47,7 +47,7 @@ import java.util.TreeSet;
 import static java.lang.String.format;
 
 /**
- * Main class to create rule proxies from annotated objects.
+ * 从带注释的对象创建规则代理的主类。
  *
  * @author Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
  */
@@ -68,7 +68,7 @@ public class RuleProxy implements InvocationHandler {
     private static final Logger LOGGER = LoggerFactory.getLogger(RuleProxy.class);
 
     /**
-     * Makes the rule object implement the {@link Rule} interface.
+     * 使规则对象实现{@link Rule}接口。
      *
      * @param rule the annotated rule object.
      * @return a proxy that implements the {@link Rule} interface.

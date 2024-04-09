@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- *  Copyright (c) 2021, Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
+ *  Copyright (c) 2020, Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -40,11 +40,11 @@ import java.util.Set;
 import java.util.TreeSet;
 
 /**
- * Inference {@link RulesEngine} implementation.
- *
- * Rules are selected based on given facts and fired according to their natural
- * order which is priority by default. This implementation continuously selects
- * and fires rules until no more rules are applicable.
+ * 推理{@link RulesEngine}实现。
+ * <p>
+ * 规则是根据给定的事实选择的，并根据它们的自然属性来执行
+ * *顺序，默认为优先级。这个实现不断地选择
+ * *和销毁规则，直到没有更多的规则适用。
  *
  * @author Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
  */
@@ -55,14 +55,14 @@ public final class InferenceRulesEngine extends AbstractRulesEngine {
     private final DefaultRulesEngine delegate;
 
     /**
-     * Create a new inference rules engine with default parameters.
+     * 使用默认参数创建新的推理规则引擎。
      */
     public InferenceRulesEngine() {
         this(new RulesEngineParameters());
     }
 
     /**
-     * Create a new inference rules engine.
+     * 创建一个新的推理规则引擎。
      *
      * @param parameters of the engine
      */
@@ -105,7 +105,8 @@ public final class InferenceRulesEngine extends AbstractRulesEngine {
     }
 
     /**
-     * Register a rule listener.
+     * 注册一个规则侦听器。
+     *
      * @param ruleListener to register
      */
     public void registerRuleListener(RuleListener ruleListener) {
@@ -114,7 +115,8 @@ public final class InferenceRulesEngine extends AbstractRulesEngine {
     }
 
     /**
-     * Register a list of rule listener.
+     * 注册一个规则侦听器列表。
+     *
      * @param ruleListeners to register
      */
     public void registerRuleListeners(List<RuleListener> ruleListeners) {
@@ -123,7 +125,8 @@ public final class InferenceRulesEngine extends AbstractRulesEngine {
     }
 
     /**
-     * Register a rules engine listener.
+     * 注册规则引擎侦听器。
+     *
      * @param rulesEngineListener to register
      */
     public void registerRulesEngineListener(RulesEngineListener rulesEngineListener) {
@@ -132,7 +135,8 @@ public final class InferenceRulesEngine extends AbstractRulesEngine {
     }
 
     /**
-     * Register a list of rules engine listener.
+     * 注册一个规则引擎侦听器列表。
+     *
      * @param rulesEngineListeners to register
      */
     public void registerRulesEngineListeners(List<RulesEngineListener> rulesEngineListeners) {

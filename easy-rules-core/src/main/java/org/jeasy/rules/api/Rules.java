@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- *  Copyright (c) 2021, Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
+ *  Copyright (c) 2020, Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -32,12 +32,12 @@ import java.util.Set;
 import java.util.TreeSet;
 
 /**
- * This class encapsulates a set of rules and represents a rules namespace.
- * Rules must have a unique name within a rules namespace.
- * 
- * Rules will be compared to each other based on {@link Rule#compareTo(Object)}
- * method, so {@link Rule}'s implementations are expected to correctly implement
- * {@code compareTo} to ensure unique rule names within a single namespace.
+ * 这个类封装了一组规则并表示一个规则命名空间。
+ * 在规则命名空间中，规则必须有唯一的名称。
+ * <p>
+ * 规则将基于{@link Rule#compareTo(Object)}来相互比较
+ * 方法，所以{@link Rule}的实现被期望正确实现
+ * {@code compareTo}确保在单个命名空间中唯一的规则名称
  *
  * @author Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
  */
@@ -46,7 +46,7 @@ public class Rules implements Iterable<Rule> {
     private Set<Rule> rules = new TreeSet<>();
 
     /**
-     * Create a new {@link Rules} object.
+     * 创建一个新的{@link Rules}对象。
      *
      * @param rules to register
      */
@@ -55,7 +55,7 @@ public class Rules implements Iterable<Rule> {
     }
 
     /**
-     * Create a new {@link Rules} object.
+     * 创建一个新的{@link Rules}对象。
      *
      * @param rules to register
      */
@@ -64,7 +64,7 @@ public class Rules implements Iterable<Rule> {
     }
 
     /**
-     * Create a new {@link Rules} object.
+     * 创建一个新的{@link Rules}对象。
      *
      * @param rules to register
      */
@@ -73,7 +73,7 @@ public class Rules implements Iterable<Rule> {
     }
 
     /**
-     * Register one or more new rules.
+     * 注册一个或多个新规则
      *
      * @param rules to register, must not be null
      */
@@ -86,7 +86,7 @@ public class Rules implements Iterable<Rule> {
     }
 
     /**
-     * Unregister one or more rules.
+     * 取消注册一个或多个规则。
      *
      * @param rules to unregister, must not be null
      */
@@ -99,7 +99,7 @@ public class Rules implements Iterable<Rule> {
     }
 
     /**
-     * Unregister a rule by name.
+     * 按名称取消注册规则。
      *
      * @param ruleName name of the rule to unregister, must not be null
      */
@@ -112,7 +112,7 @@ public class Rules implements Iterable<Rule> {
     }
 
     /**
-     * Check if the rule set is empty.
+     * 检查规则集是否为空。
      *
      * @return true if the rule set is empty, false otherwise
      */
@@ -121,14 +121,14 @@ public class Rules implements Iterable<Rule> {
     }
 
     /**
-     * Clear rules.
+     * 清空规则
      */
     public void clear() {
         rules.clear();
     }
 
     /**
-     * Return how many rules are currently registered.
+     * 返回当前注册了多少条规则。
      *
      * @return the number of rules currently registered
      */
@@ -137,8 +137,9 @@ public class Rules implements Iterable<Rule> {
     }
 
     /**
-     * Return an iterator on the rules set. It is not intended to remove rules
-     * using this iterator.
+     * 返回规则集上的迭代器。它并不打算删除规则
+     * *使用此迭代器。
+     *
      * @return an iterator on the rules set
      */
     @Override

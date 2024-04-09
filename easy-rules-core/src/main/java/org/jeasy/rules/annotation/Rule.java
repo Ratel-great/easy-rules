@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- *  Copyright (c) 2021, Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
+ *  Copyright (c) 2020, Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -30,7 +30,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Annotation to mark a class as a rule.
+ * 注释将类标记为规则。
  *
  * @author Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
  */
@@ -40,19 +40,19 @@ import java.lang.annotation.Target;
 public @interface Rule {
 
     /**
-     * The rule name which must be unique within a rules registry.
+     * 规则名称，在规则注册中心中必须是唯一的。
      * @return The rule name
      */
     String name() default org.jeasy.rules.api.Rule.DEFAULT_NAME;
 
     /**
-     * The rule description.
+     * 规则描述。
      * @return The rule description
      */
     String description() default  org.jeasy.rules.api.Rule.DEFAULT_DESCRIPTION;
 
     /**
-     * The rule priority.
+     * 规则优先级。
      * @return The rule priority
      */
     int priority() default org.jeasy.rules.api.Rule.DEFAULT_PRIORITY;

@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- *  Copyright (c) 2021, Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
+ *  Copyright (c) 2020, Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -33,7 +33,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Base class for {@link RulesEngine} implementations.
+ * {@link RulesEngine}实现的基类。
  *
  * @author Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
  */
@@ -54,7 +54,7 @@ public abstract class AbstractRulesEngine implements RulesEngine {
     }
 
     /**
-     * Return a copy of the rules engine parameters.
+     * 返回规则引擎参数的副本。
      * @return copy of the rules engine parameters
      */
     @Override
@@ -68,7 +68,7 @@ public abstract class AbstractRulesEngine implements RulesEngine {
     }
 
     /**
-     * Return an unmodifiable list of the registered rule listeners.
+     * 返回已注册规则侦听器的不可修改列表。
      * @return an unmodifiable list of the registered rule listeners
      */
     @Override
@@ -77,7 +77,7 @@ public abstract class AbstractRulesEngine implements RulesEngine {
     }
 
     /**
-     * Return an unmodifiable list of the registered rules engine listeners
+     * 返回已注册规则引擎侦听器的不可修改列表
      * @return an unmodifiable list of the registered rules engine listeners
      */
     @Override

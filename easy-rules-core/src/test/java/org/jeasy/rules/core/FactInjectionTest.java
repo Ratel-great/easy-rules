@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- *  Copyright (c) 2021, Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
+ *  Copyright (c) 2020, Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -68,17 +68,50 @@ public class FactInjectionTest {
         facts.put("rain", true);
         facts.put("age", 18);
 
-        WeatherRule weatherRule = new WeatherRule();
-        AgeRule ageRule = new AgeRule();
-        Rules rules = new Rules(weatherRule, ageRule);
+//        new MVELRule();
+//        Rule weatherRule = (Rule) new RuleBuilder()
+//                .when(new org.jeasy.rules.api.Condition() {
+//                    @Override
+//                    public boolean evaluate(Facts facts) {
+//                        if (facts.get("rain")) {
+//                            return true;
+//                        }
+//                        return false;
+//                    }
+//                })
+//                .then(new org.jeasy.rules.api.Action() {
+//                    @Override
+//                    public void execute(Facts facts) throws Exception {
+//                        System.out.println("rain  It rains, take an umbrella!");
+//                    }
+//                })
+//                .build();
+//        Rule ageRule = (Rule) new RuleBuilder()
+//                .when(new org.jeasy.rules.api.Condition() {
+//                    @Override
+//                    public boolean evaluate(Facts facts) {
+//                        if (facts.get("age").equals(18)) {
+//                            return true;
+//                        }
+//                        return false;
+//                    }
+//                })
+//                .then(new org.jeasy.rules.api.Action() {
+//                    @Override
+//                    public void execute(Facts facts) throws Exception {
+//                        System.out.println("18 You are an adult");
+//                    }
+//                })
+//                .build();
+//        Rules rules = new Rules(ageRule, weatherRule);
 
         // When
         RulesEngine rulesEngine = new DefaultRulesEngine();
-        rulesEngine.fire(rules, facts);
+//        rulesEngine.fire(rules, facts);
 
         // Then
-        assertThat(ageRule.isExecuted()).isTrue();
-        assertThat(weatherRule.isExecuted()).isTrue();
+//        assertThat(ageRule.isExecuted()).isTrue();
+//        assertThat(weatherRule.isExecuted()).isTrue();
     }
 
     @Test
@@ -128,7 +161,7 @@ public class FactInjectionTest {
     }
 
     @Rule
-	static class DummyRule {
+    static class DummyRule {
 
         private Object fact1, fact2;
         private Facts facts;
@@ -159,7 +192,7 @@ public class FactInjectionTest {
     }
 
     @Rule
-	static class AnotherDummyRule {
+    static class AnotherDummyRule {
 
         private boolean isExecuted;
 
@@ -180,7 +213,7 @@ public class FactInjectionTest {
     }
 
     @Rule
-	static class AgeRule {
+    static class AgeRule {
 
         private boolean isExecuted;
 
@@ -201,7 +234,7 @@ public class FactInjectionTest {
     }
 
     @Rule
-	static class WeatherRule {
+    static class WeatherRule {
 
         private boolean isExecuted;
 

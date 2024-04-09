@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- *  Copyright (c) 2021, Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
+ *  Copyright (c) 2020, Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -37,11 +37,11 @@ import java.util.Map;
 import java.util.Objects;
 
 /**
- * Default {@link RulesEngine} implementation.
- *
- * Rules are fired according to their natural order which is priority by default.
- * This implementation iterates over the sorted set of rules, evaluates the condition
- * of each rule and executes its actions if the condition evaluates to true.
+ * 默认的{@link RulesEngine}实现。
+ * <p>
+ * 规则是根据它们的自然顺序被触发的，默认是优先级。
+ * 这个实现遍历排序后的规则集，计算条件
+ * 每个规则的*，并在条件计算为true时执行其操作。
  *
  * @author Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
  */
@@ -50,14 +50,14 @@ public final class DefaultRulesEngine extends AbstractRulesEngine {
     private static final Logger LOGGER = LoggerFactory.getLogger(DefaultRulesEngine.class);
 
     /**
-     * Create a new {@link DefaultRulesEngine} with default parameters.
+     * 用默认参数创建一个新的{@link DefaultRulesEngine}。
      */
     public DefaultRulesEngine() {
         super();
     }
 
     /**
-     * Create a new {@link DefaultRulesEngine}.
+     * 创建一个新的{@link DefaultRulesEngine}。
      *
      * @param parameters of the engine
      */
